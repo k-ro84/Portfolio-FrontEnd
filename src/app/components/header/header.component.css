@@ -1,0 +1,27 @@
+
+h3{
+    text-align:left;
+    font-family: 'Courier New', Courier, monospace;
+    color: darkgray;
+}
+
+div{
+    background: scroll;
+    background-color: cornflowerblue;
+}
+
+.logo{
+    width: 150px;
+}
+
+.links{
+  float: right;
+   
+}
+
+.link{
+    width: 50px;
+    margin-top: 25px;
+    margin-right: 5px;
+    border-radius: 10px;
+}
