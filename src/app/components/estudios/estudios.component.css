@@ -4,8 +4,9 @@ div{
 }
 
 h1{
-    color: rgb(247, 84, 117);
-    font-family: 'Courier New', Courier, monospace;
+    color: rgb(243, 17, 62);
+    font-family:monospace ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
     margin-left: 70px;
 }
     h2, h3{
