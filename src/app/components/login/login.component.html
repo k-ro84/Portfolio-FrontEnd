@@ -1,5 +1,6 @@
-<form>
-    <div class="container">
+<div>
+   <form >
+
 
     <div>
         <div>
@@ -10,7 +11,6 @@
                   <div 
                    id="emailHelp" class="form-text">We'll never share your email with anyone else.
                   </div>
-               
             </div>
             <br />
 
@@ -21,14 +21,18 @@
                 <span id="passwordHelpInline" class="form-text">
                     Must be 8-20 characters long.
                   </span>
+                  <div class="vr"></div>
+                  <button type="button" class="btn btn-outline-secondary">Reset</button>
             </div>
             <br />
 
         </div>
         <br />
 
-        <div class="click" (click)="onClick()">Haceme click!</div>
+        <button type="submit" class="btn btn-success" >Submit</button>
+        
     </div>
 
- </div>
+    <a routerLink="/"> Go Back </a>
 </form>
+</div>

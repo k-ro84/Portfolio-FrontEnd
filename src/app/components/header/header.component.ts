@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   title:string ='portfolio web' ;
 
+  
   constructor() { }
 
   ngOnInit(): void {
