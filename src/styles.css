@@ -47,9 +47,6 @@ p{
       color:rgb(48, 30, 210);
   }
 
-body{
-    background-image: url() ;
-}
 
 h1 {
     font-size: 1.5em;
@@ -80,4 +77,16 @@ h1 {
     font-style:initial;
     color:rgb(6, 44, 44);
     margin-right: 20px;
+}
+
+
+.container2{
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 1px solid  rgb(133, 27, 71);
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgb(180, 70, 180);
 }

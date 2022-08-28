@@ -1,4 +1,21 @@
-p {
-    font-family: Lato;
+ 
+ h1{
+  text-align: center;
+  font-family: italic; 
+   color: rgb(250, 108, 51);
+ }
+ p{
+   
+  font-family: italic; 
+   color: rgb(250, 108, 51);
+ }
+  .error{
+    color:red;
+    margin-left:5px;
   }
+  
+  .border-danger{
+    border-color: red;
+  }
+
  
