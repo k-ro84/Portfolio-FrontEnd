@@ -18,9 +18,7 @@ p{
       font-family:Verdana, Geneva, Tahoma, sans-serif;
       color:rgb(122, 11, 33);
   }
-  .contraste1{
-      background-color:rgb(230, 19, 131);
-  }
+  
   
   h1 {
       font-size: 1.5em;
@@ -89,4 +87,18 @@ h1 {
     padding: 30px;
     border-radius: 5px;
     background-color: rgb(180, 70, 180);
+}
+
+.btn{
+    display: inline-block;
+    background:black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
 }

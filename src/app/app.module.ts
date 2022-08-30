@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +15,14 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { HistorialLaboralComponent } from './components/historial-laboral/historial-laboral.component';
 import { HysSkillsComponent } from './components/hys-skills/hys-skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HomeComponent } from './components/home/home.component';
 
+
+
+const appRoutes:Routes = [
+  
+ 
+]
 
 
 @NgModule({
@@ -29,7 +36,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     EstudiosComponent,
     ProyectosComponent,
     HistorialLaboralComponent,
-    HysSkillsComponent
+    HysSkillsComponent,
+    HomeComponent
    
     
   ],

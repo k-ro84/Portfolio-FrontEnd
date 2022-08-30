@@ -1,49 +1,45 @@
 <div  class="container2">
-  <div>
-          <h1>{{title}}</h1>
-  </div>
-  <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
-  <div>
-    <label for="email">Email: </label> <input type="email" id="email" formControlName="email">
+ 
+  <form>
+     <div>
+      <h1>{{title}}</h1>
+     </div> 
+
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form1Example1" class="form-control" />
+      <label class="form-label" for="form1Example1">Email address</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="form1Example2" class="form-control" />
+      <label class="form-label" for="form1Example2">Password</label>
+    </div>
+  
+    <!-- 2 column grid layout for inline styling -->
+    <div class="row mb-4">
+      <div class="col d-flex justify-content-center">
+        <!-- Checkbox -->
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+          <label class="form-check-label" for="form1Example3"> Remember me </label>
+        </div>
+      </div>
+  
+      <div class="col">
+        <!-- Simple link -->
+        <a href="#!">Forgot password?</a>
+      </div>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block btn-rounded">Sign in</button>
+     
+     <div>
+    <button type="submit" class="btn btn-success btn-block btn-rounded" ><a routerLink="/"> Go Back </a></button>
   </div>
 
-  <!-- Gracias al getter que configuramos en el controlador -->
-  <div *ngIf="Mail?.errors  && Mail?.touched">
-    <p *ngIf="Mail?.hasError('required')" class="error">
-      El email es requerido.
-    </p>
-    <p *ngIf="Mail?.hasError('email')" class="error">
-      El formato del email debe ser válido.
-    </p>
-  </div>
-  <br />
-
-  <div>
-    <label for="exampleInputPassword1" class="form-label">Password: </label> 
-    <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-danger]="MailValid">
-  </div>
-  <!-- Gracias al getter que configuramos en el controlador -->
-  <div *ngIf="Password?.errors  && Password?.touched">
-    <p *ngIf="Password?.hasError('required')" class="error">
-      El password es requerido.
-    </p>
-    <p *ngIf="Password?.errors?.['minlength']
-" class="error">
-      El password debe ser de 8 o más caracteres.
-    </p>
-  </div>
-  <br />
-
-  <div>
-    <button type="submit">Iniciar Sesión</button>
-  </div>
-
-</form>
-
-<div>
-  <p>me decis que estos son los datos ingresados?:<strong>{{form.value.email}} </strong><strong>  {{form.value.password}} </strong>
-  <p>
-</div>
-<br>
-
+  </form>
+  
 </div>
