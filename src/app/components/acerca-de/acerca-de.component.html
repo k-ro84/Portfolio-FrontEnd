@@ -1,17 +1,33 @@
 <div class="d-flex align-items-center">
 
     <div class="flex-shrink-0">
-        <img class="foto1" src="../assets/imag/avatar.webp" alt="...">
-        
+        <img class="foto1" src="../assets/imag/avatar.webp" alt="..." >
+        <button type="button" class="btn btn-danger btn-floating">
+            <i class="fas fa-tools">{{edicion}}</i>
+        </button>
     </div>
     <div class="yo">
         <h4>Carolina Olguin</h4>
         <h4>Mendoza(Argentina)</h4>
+        <button type="button" class="btn btn-danger btn-floating">
+            <i class="fas fa-tools">{{edicion}}</i>
+        </button>
     </div>
     
 
     <div class="datos1">
-        <h1 class="display-4">Acerca de mi</h1>
+        
+        <h1 class="display-4">Acerca de mi
+            <button type="button" class="btn btn-danger btn-floating">
+                <i class="fas fa-tools">{{edicion}}</i>
+            </button> 
+            <button type="button" class="btn btn-danger btn-floating">
+                <i class="fas fa-toilet">{{borrar}}</i>
+            </button> 
+
+        </h1>
+      
+        
         <ul>
             <li><i id="datos">Edad :38 años</i></li>
             <li><i id="datos">Estudiante de FullStack junior</i></li>
@@ -20,10 +36,15 @@
             <li><i id="datos">Busco desarrollarme profesionalmente y mejorar mis habilidades. </i></li>
             <li><i id="datos">En busca de una oportunidad laboral en la que adquirir más experiencia.</i></li>
         </ul>
+
+        <div id="info-actions">
+            <button type="button" class="btn btn-primary" > Tengo interés en </button>
+            <button type="button" class="btn btn-secondary" > Añadir sección </button>
+            <button type="button" class="btn btn-success" > Más </button>
+        </div>
     </div>
-    <div>
-        <button class="fa fa-pen-nib" type="button">editar</button>
-    </div>
+    
+
 </div>
 
 <br>

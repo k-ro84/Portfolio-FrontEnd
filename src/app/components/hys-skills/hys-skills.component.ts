@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hys-skills.component.css']
 })
 export class HysSkillsComponent implements OnInit {
-  
+  edicion:string='';
+  borrar:string='';
+
+
   constructor() { }
 
   ngOnInit(): void {

@@ -5,6 +5,7 @@ import { RouterModule,Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,8 +17,8 @@ import { HistorialLaboralComponent } from './components/historial-laboral/histor
 import { HysSkillsComponent } from './components/hys-skills/hys-skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeComponent } from './components/home/home.component';
-
-
+import { PortfolioService } from './service/portfolio.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const appRoutes:Routes = [
   
@@ -37,8 +38,9 @@ const appRoutes:Routes = [
     ProyectosComponent,
     HistorialLaboralComponent,
     HysSkillsComponent,
-    HomeComponent
+    HomeComponent,
    
+  
     
   ],
 
@@ -49,7 +51,7 @@ const appRoutes:Routes = [
     FormsModule,
     ReactiveFormsModule,
     NgCircleProgressModule.forRoot({}),
-    
+    HttpClientModule
   ],
 
 

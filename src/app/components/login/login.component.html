@@ -43,3 +43,54 @@
   </form>
   
 </div>
+
+
+<form [formGroup]="form"  (ngSubmit)="onEnviar($event)" class="container2">  
+
+     <div>
+      <h1>{{title}}</h1>
+     </div> 
+  <div class="form-outline mb-4">
+    <label for="email">Email: </label>                          
+    <input type="email" id="email" formControlName="email">
+</div>
+<!-- Gracias al getter que configuramos en el controlador -->
+<div *ngIf="Mail?.errors  && Mail?.touched">    
+    <p *ngIf="Mail?.hasError('required')" class="error">
+        El email es requerido.
+    </p>
+    <p *ngIf="Mail?.hasError('email')" class="error">
+        El formato del email debe ser válido.
+      </p>
+   <p *ngIf="Mail?.errors?.['minlength'] or['maxlength']
+      " class="error">
+       El email debe ser de entre 5 y 12  caracteres.
+    </p>
+</div>
+<br/>
+  <div class="form-outline mb-4">
+      <label for="exampleInputPassword1" class="form-label">Password: </label>
+      <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-danger]="MailValid">
+  </div>
+  <!-- Gracias al getter que configuramos en el controlador -->
+  <div *ngIf="Password?.errors  && Password?.touched">
+      <p *ngIf="Password?.hasError('required')" class="error">
+          El password es requerido.
+      </p>
+      <p *ngIf="Password?.errors?.['minlength'] or['maxlength']
+        " class="error">
+         El password debe ser de 8 o más caracteres.
+      </p>
+    </div>
+      <br/>
+      <div>
+        <button type="submit" class="btn btn-primary btn-block btn-rounded">Sign in</button>
+      </div>
+
+      <div>
+        <button type="submit" class="btn btn-success btn-block btn-rounded" ><a routerLink="/"> Go Back </a></button>
+      </div>
+  </form>
+  
+  <br>
+  

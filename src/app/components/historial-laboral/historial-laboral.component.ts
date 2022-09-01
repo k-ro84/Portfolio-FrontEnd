@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./historial-laboral.component.css']
 })
 export class HistorialLaboralComponent implements OnInit {
+  edicion:string='';
+  borrar:string='';
+
 
   constructor() { }
 
