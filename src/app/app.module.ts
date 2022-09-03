@@ -19,6 +19,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioService } from './service/portfolio.service';
 import {HttpClientModule} from '@angular/common/http';
+import { E404Component } from './components/e404/e404.component';
 
 const appRoutes:Routes = [
   
@@ -39,6 +40,7 @@ const appRoutes:Routes = [
     HistorialLaboralComponent,
     HysSkillsComponent,
     HomeComponent,
+    E404Component,
    
   
     
@@ -50,7 +52,15 @@ const appRoutes:Routes = [
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgCircleProgressModule.forRoot({}),
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    }),
     HttpClientModule
   ],
 

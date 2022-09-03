@@ -1,41 +1,44 @@
 <div class="d-flex align-items-center">
 
     <div class="flex-shrink-0">
+        
         <img class="foto1" src="../assets/imag/avatar.webp" alt="..." >
-        <button type="button" class="btn btn-danger btn-floating">
-            <i class="fas fa-tools">{{edicion}}</i>
-        </button>
+        <div class="btn-edit" class="btn btn-danger btn-floating">
+            <a href="#" class="btn-right"><i class="fas fa-tools">{{edicion}}</i></a>
+         </div>
     </div>
     <div class="yo">
         <h4>Carolina Olguin</h4>
-        <h4>Mendoza(Argentina)</h4>
-        <button type="button" class="btn btn-danger btn-floating">
-            <i class="fas fa-tools">{{edicion}}</i>
-        </button>
+        <h4>Mendoza(Argentina)</h4>  
+        <div class="btn-edit" class="btn btn-danger btn-floating">
+            <a href="#" class="btn-right"><i class="fas fa-tools">{{edicion}}</i></a>
+         </div>
     </div>
     
-
     <div class="datos1">
-        
-        <h1 class="display-4">Acerca de mi
-            <button type="button" class="btn btn-danger btn-floating">
-                <i class="fas fa-tools">{{edicion}}</i>
-            </button> 
-            <button type="button" class="btn btn-danger btn-floating">
-                <i class="fas fa-toilet">{{borrar}}</i>
-            </button> 
+       <div> 
+          <h1 class="display-5">Acerca de mi
+            <div class="btn-edit" class="btn btn-danger btn-floating" onclick="cambiar_parrafo()">
+                <a href="#" class="btn-right"><i class="fas fa-tools">{{edicion}}</i></a>
+             </div>
+           
+             <div class="btn-edit" class="btn btn-danger btn-floating" onclick="borrar_parrafo()">
+                <a href="#" class="btn-right"><i class="fas fa-toilet">{{borrar}}</i></a>
+             </div> 
 
-        </h1>
-      
-        
-        <ul>
-            <li><i id="datos">Edad :38 años</i></li>
-            <li><i id="datos">Estudiante de FullStack junior</i></li>
-            <li><i id="datos">Gestora Integral(matrícula pendiente)</i></li>
-            <li><i id="datos">Me considero una persona versátil y capaz de realizar varias tareas.</i></li>  
-            <li><i id="datos">Busco desarrollarme profesionalmente y mejorar mis habilidades. </i></li>
-            <li><i id="datos">En busca de una oportunidad laboral en la que adquirir más experiencia.</i></li>
-        </ul>
+          </h1>
+       </div>
+         <div id="text-datos">
+             <p> Edad :38 años </p>
+             <p>Estudiante de FullStack junior</p>
+             <p>Gestora Integral(matrícula pendiente)</p>
+             <p>Me considero una persona versátil y capaz de realizar varias tareas.</p>
+             <p>Busco desarrollarme profesionalmente y mejorar mis habilidades. </p>
+             <p>En busca de una oportunidad laboral en la que adquirir más experiencia.</p>
+         </div>
+        <div>
+            <input id="edit-datos" type="text"  style="display:none">
+        </div>
 
         <div id="info-actions">
             <button type="button" class="btn btn-primary" > Tengo interés en </button>
@@ -44,7 +47,7 @@
         </div>
     </div>
     
-
+    
 </div>
 
 <br>
