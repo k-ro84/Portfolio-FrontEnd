@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { EmailValidator } from '@angular/forms';
+
+import { Component,OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Subscription } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-acerca-de',
@@ -7,12 +11,28 @@ import { EmailValidator } from '@angular/forms';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
+  title:string=' Acerca de mi:';
+  
   edicion:string='';
   borrar:string='';
+  text:string="";
 
-  constructor() { }
+dato= new FormControl('');
+ 
 
-  ngOnInit(): void {
+
+
+  constructor() { 
+    
   }
+  
+ 
+
+ngOnInit(): void {
+    
+}
+
+
 
 }
+

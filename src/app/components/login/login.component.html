@@ -9,30 +9,31 @@
      <label for="email">Email Address </label>     
 </div>
 <!-- Gracias al getter que configuramos en el controlador -->
-<div *ngIf="Mail?.errors  && Mail?.touched">    
-    <p *ngIf="Mail?.hasError('required')" class="error">
+<div *ngIf="Email?.errors  && Email?.touched">    
+    <p *ngIf="Email?.hasError('required')" 
+    class="error"  class="alert alert-danger">
         El email es requerido.
     </p>
-    <p *ngIf="Mail?.hasError('email')" class="error">
+    <p *ngIf="Email?.hasError('email')" class="error" class="alert alert-danger" >
         El formato del email debe ser válido.
       </p>
-   <p *ngIf="Mail?.errors?.['minlength'] or['maxlength']
-      " class="error">
-       El email debe ser de entre 5 y 12  caracteres.
+   <p *ngIf="Email?.errors?.['minlength'] or['maxlength']
+      " class="error" class="alert alert-danger" >
+       El email debe ser de entre 5 y 15  caracteres.
     </p>
 </div>
 <br/>
   <div class="form-outline mb-4">
-     <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-danger]="MailValid"  class="form-control">
+     <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-danger]="EmailValid"  class="form-control">
      <label for="exampleInputPassword1" class="form-label">Password </label>
     </div>
   <!-- Gracias al getter que configuramos en el controlador -->
   <div *ngIf="Password?.errors  && Password?.touched">
-      <p *ngIf="Password?.hasError('required')" class="error">
+      <p *ngIf="Password?.hasError('required')" class="error"  class="alert alert-danger">
           El password es requerido.
       </p>
       <p *ngIf="Password?.errors?.['minlength'] or['maxlength']
-        " class="error">
+        " class="error"  class="alert alert-danger">
          El password debe ser de 8 o más caracteres.
       </p>
     </div>
@@ -58,7 +59,7 @@
       </div>
 
       <div>
-        <button type="submit" class="btn btn-success btn-block btn-rounded" class="fas fa-home">
+        <button type="submit" class="btn btn-warning btn-block " class="fas fa-home">
           <a routerLink="/"> Go Back </a>
         </button>
       </div>

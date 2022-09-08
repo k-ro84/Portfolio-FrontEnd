@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from 'src/app/service/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -14,23 +14,21 @@ export class LoginComponent implements OnInit {
 
 
   // Inyectar en el constructor el formBuilder
-  constructor(private formBuilder: FormBuilder){ 
+  constructor(private formBuilder: FormBuilder, private authService:AuthService){ 
     ///Creamos el grupo de controles para el formulario de login
     this.form= this.formBuilder.group({
       password:['',[Validators.required, Validators.minLength(8),Validators.maxLength(15)]],
-      email:['', [Validators.required, Validators.email,Validators.minLength(5),Validators.maxLength(12) ]],
+      email:['', [Validators.required, Validators.email,Validators.minLength(5),Validators.maxLength(15) ]],
    })
   }
   
-  ngOnInit(): void {
-  }
 
  
   get Password(){
     return this.form.get("password");
   }
  
-  get Mail(){
+  get Email(){
    return this.form.get("email");
   }
 
@@ -38,7 +36,7 @@ export class LoginComponent implements OnInit {
     return this.Password?.touched && !this.Password?.valid;
   }
 
-  get MailValid() {
+  get EmailValid() {
     return false
   }
 
@@ -57,7 +55,11 @@ export class LoginComponent implements OnInit {
  
   }
 
+  
 
+
+   ngOnInit(): void {
+  }
 
 
 }

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   title:string ='portfolio web' ;
-
+  edicion:string='';
   
   constructor(private router:Router) { }
 
