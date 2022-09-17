@@ -1,12 +1,12 @@
 div{
-    background-color: cornflowerblue;
+    background-color: rgb(56, 110, 211);
 
 }
 
 h1{
     color: rgb(238, 34, 75);
     font-family: 'Courier New', Courier;
-    margin-right: 100px;
+    margin:initial;
 }
 
 h2, h3{
@@ -18,29 +18,45 @@ h2, h3{
  margin-top: 120px;
   margin-left: 40px;
 }
-h4{
-
-  font-family:Verdana, Geneva, Tahoma, sans-serif; 
-  font-style: oblique;
- 
-}
 
 .foto1{
   position: absolute;
   margin-left: 20px;
   border-radius: 180px;
   width: 200px;
-  top: 700px;
-  box-shadow: 3px 3px 3px rgb(110, 18, 18);
+  top: 600px;
+  box-shadow: 4px 4px 4px rgb(185, 15, 15);
 }
 
 .datos1{
-
-  margin-left: 250px;
+ margin-left: 50px;
 }
+
+p{
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+h4{
+
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+  font-style: oblique;
+}
+
 
 info-actions{
    border-radius: 80px ;
   
 }
 
+.p1{
+  color:rgb(243, 232, 232);
+  font-size: 8rem;
+  font-family:monospace;
+  font-style: oblique;
+  position:absolute;
+  top: 35%;
+  left: 15%;
+  
+
+}

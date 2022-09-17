@@ -1,3 +1,13 @@
+<div class="card mat-card" id="first card">
+
+    <div class="profile-background">   
+  
+      <img src="../assets/imag/imagen_programacion.jpg" class="card-img-top rounded" alt="" >
+     <p class="p1">Portfolio Web</p>
+    </div>
+  
+  </div>
+
 <div class="d-flex align-items-center">
 
     <div class="flex-shrink-0">
@@ -10,35 +20,33 @@
     <div class="yo">
         <h4>Carolina Olguin</h4>
         <h4>Mendoza(Argentina)</h4>
-
-        <div class="btn-edit" class="btn btn-danger btn-floating" onclick="cambiar_parrafo()">
+        <div class="btn-edit" class="btn btn-danger btn-floating float-end">
             <a href="#" class="btn-right"><i class="fas fa-tools">{{edicion}}</i></a>
-        </div>
-
-        <div class="btn-edit" class="btn btn-danger btn-floating" onclick="borrar_parrafo()">
-
-            <a href="#" class="btn-right"><i class="fas fa-toilet">{{borrar}}</i></a>
         </div>
 
     </div>
 
-    <div class="datos1">
-        <div>
+  <div card mat-card>
+
+        <div class="datos1">
             <h1 class="display-5">{{title}}</h1>
+            <div class="btn-edit" onclick="cambiar_parrafo()">
+                <a href="#" class="btn-right"><i class="fas fa-pen"></i></a>
+            </div>
+        </div>
+        <div>
+            <p id="text-acercade"> Soy Estudiante de FullStack junior.
+                Gestora Integral(matrícula pendiente).
+                Me considero una persona versátil y capaz de realizar varias tareas.
+                Busco desarrollarme profesionalmente y mejorar mis habilidades.
+                En busca de una oportunidad laboral en la que adquirir más experiencia. </p>
         </div>
 
-
-        <div id="datos2">
-
-            <p>
-            Estudiante de FullStack junior.   
-            Gestora Integral(matrícula pendiente).  
-            Me considero una persona versátil y capaz de realizar varias tareas.  
-            Busco desarrollarme profesionalmente y mejorar mis habilidades.   
-            En busca de una oportunidad laboral en la que adquirir más experiencia.  </p>
-            <input type="text" [formControl]="dato" placeholder="nuevo dato">
-
+        <div>
+            <input id="edit-acercade" type="text" oninput="myfunction2(this.value)" style="display:none"
+                placeholder="nuevo dato">
         </div>
+        
         <div id="info-actions">
 
             <button type="button" class="btn btn-warning"> <a href="">Tengo interés en </a> </button>
@@ -46,12 +54,8 @@
             <button type="button" class="btn btn-success"> <a href="">Más </a></button>
 
         </div>
-
     </div>
-
 </div>
 
-
-
-
 <br>
+

@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   api = 'https://localhost:4200/api';
- 
-  
+  'token': string;
 
   constructor(private http: HttpClient,private router:Router) { }
 
@@ -18,10 +17,11 @@ export class AuthService {
       .subscribe((resp:any)=>{
         this.router.navigate(['profile']);
         localStorage.setItem('auth_token',resp.token);
-
+        console.log("you are logging in")
     } )
    ;
   }
+
    
   logout(){
     localStorage.removeItem('token');

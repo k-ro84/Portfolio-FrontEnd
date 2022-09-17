@@ -11,11 +11,11 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  title:string=' Acerca de mi:';
+  title:string=' Hola! me presento:';
   
   edicion:string='';
   borrar:string='';
-  text:string="";
+  texto :string='';
 
 dato= new FormControl('');
  

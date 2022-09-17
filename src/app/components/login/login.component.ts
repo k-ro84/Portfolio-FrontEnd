@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   }
   
 
+
  
   get Password(){
     return this.form.get("password");
@@ -54,8 +55,6 @@ export class LoginComponent implements OnInit {
     }
  
   }
-
-  
 
 
    ngOnInit(): void {
