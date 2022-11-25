@@ -9,22 +9,21 @@ h1{
     margin:initial;
 }
 
-h2, h3{
-    display: inline;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 
-.yo{
+.yo {
+
  margin-top: 120px;
-  margin-left: 40px;
+margin-right: 50px;
+   
 }
 
 .foto1{
+
   position: absolute;
   margin-left: 20px;
   border-radius: 180px;
   width: 200px;
-  top: 600px;
+  top: 650px;
   box-shadow: 4px 4px 4px rgb(185, 15, 15);
 }
 
@@ -38,25 +37,35 @@ p{
 }
 
 h4{
-
   font-family:Verdana, Geneva, Tahoma, sans-serif; 
   font-style: oblique;
 }
 
 
 info-actions{
-   border-radius: 80px ;
-  
+   border-radius: 80px ; 
 }
 
-.p1{
-  color:rgb(243, 232, 232);
-  font-size: 8rem;
+section.fondo{
+  background-image: url(/assets/imag/imagen_programacion2.jpg);
+  width:100%;
+  height: 100vh;
+  background-repeat:no-repeat;
+  justify-content:center;
+  position:relative;
+}
+.intro{
+  color:rgb(253, 14, 221);
   font-family:monospace;
   font-style: oblique;
-  position:absolute;
-  top: 35%;
-  left: 15%;
-  
+ 
+}
 
+h2{
+  padding-top:15%;
+  font-size: 5.5rem;
+}
+
+h3{
+  font-size: 4.5rem;
 }

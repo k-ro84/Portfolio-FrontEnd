@@ -7,5 +7,10 @@ import { Observable,of } from 'rxjs';
 })
 export class PortfolioService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
+
+  obtenerDatos():Observable<any>{
+    //console.log("obtener datos del portfolio")
+    return this.http.get('json');
+  }
 }

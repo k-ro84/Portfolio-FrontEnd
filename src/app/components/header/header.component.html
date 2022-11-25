@@ -1,7 +1,6 @@
-<div class="row">
 
-  <div class="container">
-
+<nav class="navbar navbar-expand-lg bg-grey">
+  <div class="container-fluid">
     <div class="argp">
       <a href="https://argentinaprograma.inti.gob.ar">
         <img src="../assets/imag/logoArgProg.png" alt="argpprod" class="logo ">
@@ -10,29 +9,44 @@
       <a href="https://argentinaprograma.inti.gob.ar">
         <img src="../assets/imag/LogosInti.png" alt="argpprod" class="logo ">
       </a>
-    </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dame click
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/estudios">estudios</a></li>
+              <li><a class="dropdown-item" routerLink="/proyectos">proyectos</a></li>
+              <li><a class="dropdown-item" routerLink="/**" ><i class="fas fa-beer"></i></a></li>
+              <li><hr class="dropdown-divider"></li>
 
-    
-    <div class="links">
-     
-      <a href="https://github.com">
-        <img src="../assets/imag/GITHUB-LOGO.png" alt="" class="link"></a>
-      <a href="https://facebook.com">
-        <img src="../assets/imag/facebook.png" alt="" class="link"></a>
-      <a href="https://discord.com">
-        <img src="../assets/imag/discord.jpg.jpg" alt="" class="link"></a>
-      <a href="https://linkedin.com">
-        <img src="../assets/imag/linkedinLogo.png" alt="" class="link"></a>
-
-        <button type="button" class="btn btn-outline-danger" ><a routerLink="/login">Registro</a> </button>
-        <!--<button type="button" class="btn btn-outline-danger" (click)=""> Inicio Sesión </button>-->
-        <!--<button type="button" class="btn btn-outline-danger" (click)=""> Cerrar sesión </button>-->
+              <li><a class="dropdown-item" routerLink="/login">Registro</a></li>
+            </ul>
+          </li>
+          
+        </ul>
        
-    </div>
-
+      
   </div>
 
+    </div>
 
-</div>
-
+        <div class="links">
+     
+          <a href="https://github.com/k-ro84">
+            <img src="../assets/imag/GITHUB-LOGO.png" alt="" class="link"></a>
+          <a href="https://www.facebook.com/krito.olguin">
+            <img src="../assets/imag/facebook.png" alt="" class="link"></a>
+          <a href="https://discord.gg/invite/k-rito#7164">
+            <img src="../assets/imag/discord.jpg.jpg" alt="" class="link"></a>
+          <a href="https://www.linkedin.com/in/carolina-olguin-/">
+            <img src="../assets/imag/linkedinLogo.png" alt="" class="link"></a>
+           
+         <button type="button" class="btn btn-outline-danger" ><a routerLink="/login">Registro</a> </button>
+   
+    </div>
+  </div>
+</nav>
 

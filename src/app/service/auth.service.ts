@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
-
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import{ BehaviorSubject,Observable} from 'rxjs';
+import { map } from 'rxjs/operators' ;
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  
+  
   api = 'https://localhost:4200/api';
   'token': string;
 

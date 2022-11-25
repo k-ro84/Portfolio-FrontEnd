@@ -19,6 +19,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeComponent } from './components/home/home.component';
 import { PortfolioService } from './service/portfolio.service';
 import {HttpClientModule} from '@angular/common/http';
+
 import { E404Component } from './components/e404/e404.component';
 
 const appRoutes:Routes = [

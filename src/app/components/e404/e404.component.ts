@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class E404Component implements OnInit {
 
-  te404:string='nada para ver por aca';
+  te404:string=' Si llegaste acá , significa que metiste la pata !!!';
 
   constructor() { }
 

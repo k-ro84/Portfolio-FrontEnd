@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: #3C3B3F;  /* fallback for old browsers */
+    
     background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }   
@@ -25,7 +25,7 @@ aside {
 
 p{
     margin: 0;
-    color: blue;
+    color: rgb(243, 179, 172);
     font-size: larger;
   }
   .reference{
@@ -98,7 +98,7 @@ h1 {
 .btn{
     display: inline-block;
     background:black;
-    color: #fff;
+    color: rgb(238, 212, 212);
     border: none;
     padding: 10px 20px;
     margin: 5px;

@@ -3,9 +3,14 @@
 
      <div>
       <h1>{{title}}</h1>
+     
      </div> 
+
+
   <div class="form-outline mb-4">
-     <input type="email" id="email" formControlName="email"  class="form-control">
+     <input type="email" id="email" formControlName="email" 
+     [ngClass]="{'is-invalid':Email?.errors && Email?.touched,'is-valid': !Email?.errors && Email?.touched}" 
+     class="form-control">
      <label for="email">Email Address </label>     
 </div>
 <!-- Gracias al getter que configuramos en el controlador -->
@@ -18,25 +23,29 @@
         El formato del email debe ser válido.
       </p>
    <p *ngIf="Email?.errors?.['minlength'] or['maxlength']
-      " class="error" class="alert alert-danger" >
-       El email debe ser de entre 5 y 15  caracteres.
+      "  class="alert alert-danger" >
+       El email debe ser de entre 5 y 20  caracteres.
     </p>
 </div>
 <br/>
   <div class="form-outline mb-4">
-     <input type="password" id="exampleInputPassword1" formControlName="password" [class.border-danger]="EmailValid"  class="form-control">
+     <input type="password" id="exampleInputPassword1" formControlName="password" 
+     [ngClass]="{'is-invalid':Password?.errors && Password?.touched,'is-valid': !Password?.errors && Password?.touched}"
+     [class.border-danger]="EmailValid"  class="form-control">
      <label for="exampleInputPassword1" class="form-label">Password </label>
     </div>
   <!-- Gracias al getter que configuramos en el controlador -->
   <div *ngIf="Password?.errors  && Password?.touched">
-      <p *ngIf="Password?.hasError('required')" class="error"  class="alert alert-danger">
+      <p *ngIf="Password?.hasError('required')"  class="alert alert-danger">
           El password es requerido.
       </p>
-      <p *ngIf="Password?.errors?.['minlength'] or['maxlength']
-        " class="error"  class="alert alert-danger">
+      <p *ngIf="Password?.errors?.['minlength'] or['maxlength'] " 
+       class="alert alert-danger">
          El password debe ser de 8 o más caracteres.
       </p>
     </div>
+
+   
 
     <div class="row mb-4">
       <div class="col d-flex justify-content-center">

@@ -2,6 +2,7 @@
 import { Component,OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { PortfolioService } from 'src/app/service/portfolio.service';
 
 
 
@@ -11,25 +12,18 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./acerca-de.component.css']
 })
 export class AcercaDeComponent implements OnInit {
-  title:string=' Hola! me presento:';
-  
-  edicion:string='';
-  borrar:string='';
+  title:string='   Me presento :  ' ;
+
   texto :string='';
 
 dato= new FormControl('');
- 
 
-
-
-  constructor() { 
+  constructor(private datosPortfolio:PortfolioService) { 
     
   }
   
- 
-
 ngOnInit(): void {
-    
+    this.datosPortfolio.obtenerDatos();
 }
 
 

@@ -12,22 +12,24 @@ h6{
     color: rgb(134, 40, 8);
 }
 
-.row{
+.container-fluid{
     background-color: rgb(170, 243, 243);
 }
 
 
-.container4{
-    margin-left: 10px;
-    align-items: center;
-    display: flex;
-   
-}
-
-.link2{
+.link3{
     width: 50px;
     border-radius: 10px;
-    margin-left: 5px;
-    margin-top: 5px;
+    margin-left: 20px;
+    margin-top: 10px;
 }
 
+.btnn{
+    background-color: rgb(29, 29, 151);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+    text-decoration:underline;
+}
+
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bs-primary);
+  }
