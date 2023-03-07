@@ -1,0 +1,38 @@
+<br>
+<div class="d-flex align-items-center">
+
+    <div >
+      <button class="btn btn-danger btn-floating float-end" type="button" *ngIf="isAdmin" routerLink="/newhistorial">agregar historial</button>
+    </div>
+
+  <div *ngFor="let Historial of historial">
+
+    <div class="flex-shrink-0">
+         <h1> Experiencia</h1>
+    </div>
+
+    <ul >
+      <li> 
+        <p>{{Historial.empresa}}</p>
+      </li> 
+      <li> <h3>{{Historial.periodo}} - </h3>
+      </li> 
+      
+      <h4>{{Historial.puesto}} - </h4>
+      <h4> {{Historial.actividades}} </h4>
+    
+    </ul>
+  
+    <div>
+      <button class="btn btn-floating float-end"  *ngIf="isAdmin == true" routerLink="/edithistorial/{{Historial.id}}">edit </button>
+   </div>
+   <div >
+      <button class="btn btn-floating float-end"  *ngIf="isAdmin == true" (click)="delete(Historial.id)">delete </button>
+   </div>
+  
+  </div>
+  
+ 
+</div>
+
+<br>

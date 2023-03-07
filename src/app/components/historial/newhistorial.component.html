@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+      <div>
+        <h2>{{title}} </h2>
+        <p>{{subtitle}}</p>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" >
+              <div class="form-group">  
+               
+                <label class="col-md-2 control-label" for="empresa">Empresa </label>
+                <input type="text" class="form-control" id="empresa" name="empresa" [(ngModel)]="empresa" required> 
+              </div>
+
+              <div class="form-group">   
+                <label class="col-md-2 control-label" for="puesto">Puesto/posición </label>
+                <input type="text" class="form-control" id="puesto" name="puesto" [(ngModel)]="puesto" required> 
+              </div>
+
+              <div class="form-group">   
+                <label class="col-md-2 control-label" for="periodo">periodo/tiempo </label>
+                <input type="text" class="form-control" id="periodo" name="periodo" [(ngModel)]="periodo" required> 
+              </div>
+
+              <div class="form-group">   
+                <label class="col-md-2 control-label" for="actividades"> Actividades/funciones </label>
+                <input type="text" class="form-control" id="actividades" name="actividades" [(ngModel)]="actividades" required> 
+              </div>
+              <br>
+              
+              <button type="submit">
+                nuevo historial
+              </button>
+              
+        </form>
+        <br>
+      </div>
+    </div>
+   
+</div>
+  

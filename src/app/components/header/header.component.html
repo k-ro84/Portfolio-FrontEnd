@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg bg-grey">
+<nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
     <div class="argp">
       <a href="https://argentinaprograma.inti.gob.ar">
@@ -9,30 +9,26 @@
       <a href="https://argentinaprograma.inti.gob.ar">
         <img src="../assets/imag/LogosInti.png" alt="argpprod" class="logo ">
       </a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dame click
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/estudios">estudios</a></li>
-              <li><a class="dropdown-item" routerLink="/proyectos">proyectos</a></li>
-              <li><a class="dropdown-item" routerLink="/**" ><i class="fas fa-beer"></i></a></li>
-              <li><hr class="dropdown-divider"></li>
-
-              <li><a class="dropdown-item" routerLink="/login">Registro</a></li>
+     
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Acceso rápido
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="/acercaDe"> acerca de mi</a></li>
+                  <li><a class="dropdown-item" href="/estudios"> estudios</a></li>
+                  <li><a class="dropdown-item" href="/historial"> experiencias</a></li>
+                  <li><a class="dropdown-item" href="/proyectos"> proyectos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="/e404" >acá no</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          
-        </ul>
-       
+          </div>
+        </div>
       
-  </div>
-
-    </div>
-
         <div class="links">
      
           <a href="https://github.com/k-ro84">
@@ -44,7 +40,7 @@
           <a href="https://www.linkedin.com/in/carolina-olguin-/">
             <img src="../assets/imag/linkedinLogo.png" alt="" class="link"></a>
            
-         <button type="button" class="btn btn-outline-danger" ><a routerLink="/login">Registro</a> </button>
+         <button type="button" class="btn btn-outline-danger" id="boton"><a routerLink="/login">Registro</a> </button>
    
     </div>
   </div>

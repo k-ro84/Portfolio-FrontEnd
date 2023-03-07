@@ -5,5 +5,7 @@ p{
 .container3{
  margin-left:50px ;
  border-color: black;
+border-width: 1rem;
+align-content: center;
 }
 

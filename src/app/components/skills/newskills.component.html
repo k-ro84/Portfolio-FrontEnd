@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div>
+        <h2>{{title}} </h2>
+        <p>{{subtitle}}</p>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" >
+         
+              <div class="form-group">   
+                <label class="col-md-2 control-label" for="tecnologia">tecnologia </label>
+                <input type="text" class="form-control" id="tecnologia" name="tecnologia" [(ngModel)]="tecnologia" required> 
+              </div>
+
+              <div class="form-group">   
+                <label class="col-md-2 control-label" for="porcentaje">porcentaje </label>
+                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required> 
+              </div>
+
+
+              <button type="submit">
+                nueva habilidad
+              </button>
+        </form>
+  
+      </div>
+    </div>
+</div>
+  

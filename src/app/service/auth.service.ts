@@ -3,6 +3,9 @@ import { HttpClientModule,HttpClient } from '@angular/common/http';
 import{ BehaviorSubject,Observable} from 'rxjs';
 import { map } from 'rxjs/operators' ;
 import { Router } from '@angular/router';
+import { JwtDto } from '../models/jwt-dto';
+import { Login } from '../models/login';
+import { NuevoUsuario } from '../models/nuevo-usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -10,29 +13,27 @@ import { Router } from '@angular/router';
 export class AuthService {
   
   
-  api = 'https://localhost:4200/api';
-  'token': string;
+  api = 'http://localhost:4200/';
+  url='http://localhost:4200/api/auth/';
+  //currentUserSubject:BehaviorSubject<any>;
+  
 
-  constructor(private http: HttpClient,private router:Router) { }
+  constructor(private httpClient: HttpClient,private router:Router) { }
 
-  login(email:string,password:string){
-    this.http.post(this.api+'/authenticate',{email:email,password:password})
-      .subscribe((resp:any)=>{
-        this.router.navigate(['profile']);
-        localStorage.setItem('auth_token',resp.token);
-        console.log("you are logging in")
-    } )
-   ;
+
+  public nuevo(nuevoUsuario: NuevoUsuario): Observable<any> {
+    return this.httpClient.post<any>(`${this.url}nuevo`, nuevoUsuario);
   }
 
-   
-  logout(){
-    localStorage.removeItem('token');
+  public login(login: Login): Observable<JwtDto> {
+    return this.httpClient.post<JwtDto>(`${this.url}login`, login)
   }
 
-   public get logIn():boolean{
-  return(localStorage.getItem('token')!==null);
-   }
+  public isLogged(): boolean {
+    return sessionStorage.getItem('user') !== null;
+  }
+
+
    
 
 

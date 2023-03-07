@@ -1,0 +1,53 @@
+<div class="row">
+
+  <h1>Hard & Soft skills</h1>
+  <div class="col-lg-2">
+      <button type="button" routerLink="/newskills" class="btn btn-dark" *ngIf="isAdmin">Nueva Skill</button>
+  </div>
+
+
+  <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skills">
+     <h2></h2>
+     <h3>{{skill.tecnologia}}</h3>
+      <circle-progress 
+      [percent]="(skill.porcentaje)" 
+      [radius]="90" [imageSrc]="''" 
+      [title]="(skill.tecnologia)"
+      [titleColor]="'#212F3C'"
+      [showTitle]="true" 
+      [showImage]="false" 
+      [imageHeight]="70" 
+      [imageWidth]="70" 
+      [showUnits]="false"
+      [showSubtitle]="false" 
+      [outerStrokeWidth]="16" 
+      [innerStrokeWidth]="2" 
+      [outerStrokeColor]="'#78C000'"
+      [innerStrokeColor]="'#C7E596'" 
+      [animation]="true" 
+      [animationDuration]="600">
+      </circle-progress>
+
+      <div>
+          <td  *ngIf="isAdmin == true">
+              <button class="btn btn-light" routerLink="/editskill/{{skill.id}}" >Edit
+                  <i class="bi bi-pencil-fill"></i></button>
+          </td>
+          <td  *ngIf="isAdmin == true">
+              <button (click)="delete(skill.id)">delete
+                  <i class="bi bi-trash-fill"></i></button>
+          </td>
+      </div>
+      
+  </div>
+</div>
+
+
+
+<br>
+
+<!-- 
+  para agragar imagen [imageSrc]="'../assets/imag/img-hys/...'"
+      [showImage]="true"
+      [imageHeight]="90"
+      [imageWidth]="90" -->

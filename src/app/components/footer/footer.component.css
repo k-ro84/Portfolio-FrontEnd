@@ -12,6 +12,9 @@ h6{
     color: rgb(134, 40, 8);
 }
 
+.cardfoot{
+  background-color: slategrey;
+}
 .container-fluid{
     background-color: rgb(170, 243, 243);
 }
@@ -22,12 +25,18 @@ h6{
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 10px;
+    background-color:cornflowerblue ;
+    align-items: center;
+    align-self: center;
+    border-color: black;
+    
 }
 
 .btnn{
-    background-color: rgb(29, 29, 151);
+    background-color:lightslategray ;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
     text-decoration:underline;
+   
 }
 
 .custom-tooltip {

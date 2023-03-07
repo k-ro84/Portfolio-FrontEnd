@@ -1,5 +1,5 @@
 div{
-    background-color:  rgb(56, 110, 211);
+    background-color:  rgb(98, 122, 165);
  
 }
 
@@ -7,7 +7,8 @@ h1{
     color: rgb(243, 17, 62);
     font-family:monospace ,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-style: oblique;
-    margin-left: 50px;
+    margin-left:5rem;
+   text-align: center;
 }
     h2, h3{
     display: inline;
