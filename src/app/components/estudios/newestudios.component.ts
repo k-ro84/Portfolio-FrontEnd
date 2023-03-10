@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { Estudios } from 'src/app/models/estudios';
 import { EstudiosService } from 'src/app/service/estudios.service';
 
@@ -23,8 +22,7 @@ subtitle: string = 'rellene el siguiente formulario';
 
 
   constructor(private estudioS:EstudiosService,
-    private router: Router,
-    private toastr: ToastrService) { }
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -34,16 +32,12 @@ subtitle: string = 'rellene el siguiente formulario';
     const estudios =new Estudios(this.institucion, this.periodo, this.detalles,this.estado,this.tituloEduc, this.imagEstud);
     this.estudioS.save(estudios).subscribe(
     data => {
-      //alert("estudio/carrera añadido/a correctamente!!!!");
-      this.toastr.success('Producto Creado', 'OK', {
-        timeOut: 3000, positionClass: 'toast-top-center'
-      });
+      alert("estudio/carrera añadido/a correctamente!!!!");
+     
       this.router.navigate(['']);
     },err => {
-     // alert("Error al cargar estudio/carrera añadido/a");
-     this.toastr.error(err.error.mensaje, 'Fail', {
-      timeOut: 3000,  positionClass: 'toast-top-center',
-    });
+      alert("Error al cargar estudio/carrera añadido/a");
+  
      this.router.navigate(['']);
     }
     )

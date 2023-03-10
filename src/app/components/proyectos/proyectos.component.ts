@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Proyectos } from 'src/app/models/proyectos';
-import { PortafolioService } from 'src/app/service/portafolio.service';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 import { TokenService } from 'src/app/service/token-service';
 import { environment } from 'src/environments/environment';
@@ -60,11 +59,9 @@ export class ProyectosComponent implements OnInit {
   delete(id?:number):void{
     if (id != undefined) {
     this.proyectosS.delete(id).subscribe(
-      data=> {
-        
+      data=> { 
         this.cargarProyecto();
       },err => {
-       
         alert("no es posible eliminar este proyecto!!");
       }
     )

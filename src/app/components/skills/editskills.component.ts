@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { Skills } from 'src/app/models/skills';
 import { HysService } from 'src/app/service/hys.service';
 
@@ -15,8 +14,7 @@ export class EditskillsComponent implements OnInit {
 
   constructor(private  skillsS: HysService,
     private activatedRouter: ActivatedRoute,
-    private router:Router,
-    private toastr: ToastrService) { }
+    private router:Router) { }
 
   
   ngOnInit(): void {
@@ -25,10 +23,7 @@ export class EditskillsComponent implements OnInit {
      data => {
        this.Skills = data;
      },err =>{
-       //alert("error al modificar esta habilidad");
-       this.toastr.error(err.error.mensaje, 'Fail', {
-        timeOut: 3000,  positionClass: 'toast-top-center',
-      });
+       alert("error al modificar esta habilidad");
        this.router.navigate(['']);
      }
     )
@@ -39,14 +34,10 @@ export class EditskillsComponent implements OnInit {
   const id = this.activatedRouter.snapshot.params['id'];
   this.skillsS.update(id,this.Skills).subscribe(
 data => {
- // alert("habilidad modificada correctamente!!!!");
- this.toastr.success('Producto Actualizado', 'OK', {
-  timeOut: 3000, positionClass: 'toast-top-center'
-});
+ alert("habilidad modificada correctamente!!!!");
   this.router.navigate(['']);
 },err => {
- // alert("Error al modificar la habilidad indicada !!");
- // alert("Error al modificar el proyecto indicado !!");
+  alert("Error al modificar la habilidad indicada !!");
 
   this.router.navigate(['']);
 }

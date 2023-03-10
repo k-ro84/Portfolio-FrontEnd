@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { Estudios } from 'src/app/models/estudios';
 import { EstudiosService } from 'src/app/service/estudios.service';
 
@@ -15,8 +14,7 @@ Education :Estudios=null;
 
   constructor(private estudioS:EstudiosService,
      private activatedRouter: ActivatedRoute,
-    private router:Router,
-    private toastr: ToastrService) { }
+    private router:Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -24,10 +22,8 @@ Education :Estudios=null;
      data => {
        this.Education= data;
      },err =>{
-      this.toastr.error(err.error.mensaje, 'Fail', {
-        timeOut: 3000,  positionClass: 'toast-top-center',
-      });
-       //alert("error al modificar estudio/nivel educativo");
+  
+       alert("error al modificar estudio/nivel educativo");
        this.router.navigate(['']);
      }
     );
@@ -40,16 +36,11 @@ Education :Estudios=null;
     const id = this.activatedRouter.snapshot.params['id'];
     this.estudioS.update(id,this.Education).subscribe(
   data => {
-   // alert("estudio modificado correctamente!!!!");
-   this.toastr.success('Producto Actualizado', 'OK', {
-    timeOut: 3000, positionClass: 'toast-top-center'
-  });
+   alert("estudio modificado correctamente!!!!");
+
     this.router.navigate(['']);
   },err => {
-  //alert("Error al modificar el estudio/nivel educativo indicado !!");
-  this.toastr.error(err.error.mensaje, 'Fail', {
-    timeOut: 3000,  positionClass: 'toast-top-center',
-  });
+  alert("Error al modificar el estudio/nivel educativo indicado !!");
   this.router.navigate(['']);
   }
   )
