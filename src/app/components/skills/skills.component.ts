@@ -1,7 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { CircleProgressComponent, NgCircleProgressModule } from 'ng-circle-progress';
-import { ToastrService } from 'ngx-toastr';
 import { Skills } from 'src/app/models/skills';
 import { HysService } from 'src/app/service/hys.service';
 import { PortafolioService } from 'src/app/service/portafolio.service';

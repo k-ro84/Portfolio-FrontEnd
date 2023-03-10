@@ -1,7 +1,6 @@
 
 import { Component,OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { Subscription } from 'rxjs';
 import { AcercaDe } from 'src/app/models/acercaDe';
 import { AcercadeService } from 'src/app/service/acercade.service';

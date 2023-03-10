@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormsModule} from '@angular/forms';
 import { Router, RouterLinkWithHref } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 import { Login } from 'src/app/models/login';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token-service';

@@ -5,7 +5,6 @@ import { EstudiosService } from 'src/app/service/estudios.service';
 import { PortafolioService } from 'src/app/service/portafolio.service';
 import { environment } from 'src/environments/environment';
 import { TokenService } from 'src/app/service/token-service';
-import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-estudios',
   templateUrl: './estudios.component.html',

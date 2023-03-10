@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { Historial } from 'src/app/models/historial';
 import { HistorialService } from 'src/app/service/historial.service';
 import { PortafolioService } from 'src/app/service/portafolio.service';
