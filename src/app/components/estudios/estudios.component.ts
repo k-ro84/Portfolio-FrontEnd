@@ -21,7 +21,7 @@ export class EstudiosComponent implements OnInit {
   authority:string;
   isAdmin = false;
 
-  constructor( private estudioS:EstudiosService, private tokenService:TokenService, private toastr: ToastrService) { 
+  constructor( private estudioS:EstudiosService, private tokenService:TokenService) { 
      this.form= new FormGroup({
      imagEstud: new FormControl(['', [Validators.required]]),
      institucion: new FormControl(['', [Validators.required, Validators.minLength(2)]]),

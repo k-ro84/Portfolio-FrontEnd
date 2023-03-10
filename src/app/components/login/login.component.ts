@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormsModule} from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLinkWithHref } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Login } from 'src/app/models/login';
 import { AuthService } from 'src/app/service/auth.service';
@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
 
   // Inyectar en el constructor el formBuilder
   constructor(private tokenService: TokenService,
-    private formBuilder: FormBuilder, private authService:AuthService, private routes:Router,private toastr: ToastrService){ 
+    private formBuilder: FormBuilder, private authService:AuthService, private routes:Router){ 
     ///Creamos el grupo de controles para el formulario de login
     this.form= this.formBuilder.group(
       {
@@ -67,23 +67,18 @@ export class LoginComponent implements OnInit {
       this.tokenService.setEmail(data.email);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
-      this.toastr.success('Bienvenido ' +data.email, 'Has Iniciado Sesion', {
-        timeOut: 3000, positionClass: 'toast-top-center'
-      })
+     
       this.routes.navigate(['/'])
     }, 
     error: err => {
       this.isLogged = false;
       this.errMsj = err.error.mensaje;
-      this.toastr.error(this.errMsj, 'Fail', {
-        timeOut: 3000, positionClass: 'toast-top-center',
-      })
-      // console.log(this.errMsj);
+      console.log(this.errMsj);
     }})
    // if (this.form.valid){
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-    // alert("Todo salio bien ¡Enviar formulario!")
+    alert("Todo salio bien ¡Enviar formulario!")
       this.routes.navigate(['/home']);
    // }else{
       //Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     

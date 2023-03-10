@@ -28,7 +28,7 @@ export class AcercaDeComponent implements OnInit {
  roles:string[];
  isAdmin=false;
   constructor(private acercaDes:AcercadeService, 
-    private tokenService:TokenService,private toastr:ToastrService) { 
+    private tokenService:TokenService) { 
      this.form= new FormGroup({
        nombre: new FormControl([ '', [Validators.required, Validators.minLength(2)]]),
        apellido: new FormControl([ '', [Validators.required, Validators.minLength(2)]]),
@@ -69,14 +69,10 @@ delete(id?:number):void {
   if (id != undefined) {
   this.acercaDes.delete(id).subscribe(
     data=> {
-      this.toastr.success('Proyecto Eliminado', 'OK', {
-        timeOut: 3000, positionClass: 'toast-top-center'
-      });
+     
       this.cargarPersona();
     },err => {
-      this.toastr.error(err.error.mensaje, 'Fail', {
-        timeOut: 3000, positionClass: 'toast-top-center',
-      });
+      
       alert("no es posible eliminar esta persona!!");
     }
   )

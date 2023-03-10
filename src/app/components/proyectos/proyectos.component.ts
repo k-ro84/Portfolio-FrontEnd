@@ -22,8 +22,7 @@ export class ProyectosComponent implements OnInit {
   isAdmin=false;
 
   constructor(private proyectosS:ProyectosService, 
-    private tokenService:TokenService,
-    private toastr: ToastrService) { 
+    private tokenService:TokenService) { 
     this.form= new FormGroup ({
       descripcion: new FormControl([ '', [Validators.required, Validators.minLength(2)]]),
       tituloProyecto:  new FormControl(['', [Validators.required, Validators.minLength(2)]]),
@@ -63,14 +62,10 @@ export class ProyectosComponent implements OnInit {
     if (id != undefined) {
     this.proyectosS.delete(id).subscribe(
       data=> {
-        this.toastr.success('Proyecto Eliminado', 'OK', {
-          timeOut: 3000, positionClass: 'toast-top-center'
-        });
+        
         this.cargarProyecto();
       },err => {
-        this.toastr.error(err.error.mensaje, 'Fail', {
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
+       
         alert("no es posible eliminar este proyecto!!");
       }
     )

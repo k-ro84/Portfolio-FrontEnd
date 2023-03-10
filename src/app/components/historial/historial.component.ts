@@ -21,7 +21,7 @@ export class HistorialComponent implements OnInit {
   roles:string[];
   isAdmin=false;
 
-  constructor( private historiales: HistorialService,private tokenService:TokenService,private toastr: ToastrService) { 
+  constructor( private historiales: HistorialService,private tokenService:TokenService) { 
     this.form= new FormGroup({
      imagen: new FormControl(['', [Validators.required, Validators.minLength(1)]]),
     empresa: new FormControl([ '', [Validators.required, Validators.minLength(2)]]),
@@ -62,15 +62,11 @@ export class HistorialComponent implements OnInit {
     if(id != undefined){
       this.historiales.delete(id).subscribe(
         data => {
-          this.toastr.success('Producto Eliminado', 'OK', {
-            timeOut: 3000, positionClass: 'toast-top-center'
-          });
+         
           this.cargarExperiencia();
         }, err => {
-          this.toastr.error(err.error.mensaje, 'Fail', {
-            timeOut: 3000, positionClass: 'toast-top-center',
-          });
-         // alert("No se pudo borrar la experiencia");
+         
+         alert("No se pudo borrar la experiencia");
         }
       )
     }

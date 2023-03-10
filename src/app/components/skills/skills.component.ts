@@ -25,8 +25,7 @@ export class SkillsComponent implements OnInit {
 
   constructor(private skillsS: HysService, 
     private formBuilder:FormBuilder,
-    private tokenService:TokenService,
-    private toastr: ToastrService) {  
+    private tokenService:TokenService) {  
     
      this.form= this.formBuilder.group  ({
       imagen:(['', [Validators.required, Validators.minLength(1)]]),
@@ -69,14 +68,10 @@ this.roles = this.tokenService.getAuthorities();
     if (id != undefined) {
     this.skillsS.delete(id).subscribe(
       data=> {
-        this.toastr.success('Producto Eliminado', 'OK', {
-          timeOut: 3000, positionClass: 'toast-top-center'
-        });
+    
         this.cargarSkills();
       },err => {
-        this.toastr.error(err.error.mensaje, 'Fail', {
-          timeOut: 3000, positionClass: 'toast-top-center',
-        });
+       
         alert("no es posible eliminar esta habilidad/skills!!");
       }
     )
