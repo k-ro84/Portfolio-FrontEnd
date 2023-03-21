@@ -1,6 +1,5 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { E404Component } from './components/e404/e404.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EstudiosComponent} from './components/estudios/estudios.component';
@@ -19,7 +18,7 @@ import { NewproyectoComponent } from './components/proyectos/newproyecto.compone
 import { EditproyectosComponent } from './components/proyectos/editproyectos.component';
 import { HistorialComponent } from './components/historial/historial.component';
 import { SkillsComponent } from './components/skills/skills.component';
-
+import { E404Component } from './components/e404/e404.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -41,7 +40,7 @@ const routes: Routes = [
   {path:'newproyecto',component:NewproyectoComponent},
   {path:'editproyectos/:id',component:EditproyectosComponent},
 
-  /*{path:'',redirectTo:'home',pathMatch:'full'},*/
+  {path:'',redirectTo:'home',pathMatch:'full'},
   
   {path:'**',component:E404Component}
 ];
