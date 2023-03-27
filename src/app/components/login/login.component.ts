@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,FormsModule} from '@angular/forms';
-import { Router, RouterLinkWithHref } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Login } from 'src/app/models/login';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token-service';
@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
   form: FormGroup;
+  authority:string;
 
   // Inyectar en el constructor el formBuilder
   constructor(private tokenService: TokenService,
@@ -87,7 +88,7 @@ export class LoginComponent implements OnInit {
   }
 
   volver(){
-    this.routes.navigate(['/home'])
+    this.routes.navigate(['/'])
   }
 
 

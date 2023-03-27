@@ -18,8 +18,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HomeComponent } from './components/home/home.component';
 import { PortafolioService } from './service/portafolio.service';
-import {HttpClientModule} from '@angular/common/http';
-
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NewacercaComponent } from'./components/acercaDe/newacerca.component';
 import { EditacercaComponent } from './components/acercaDe/editacerca.component';
 import { NewestudiosComponent } from './components/estudios/newestudios.component';
@@ -30,8 +29,6 @@ import { NewskillsComponent } from './components/skills/newskills.component';
 import { EditskillsComponent } from './components/skills/editskills.component';
 import { NewproyectoComponent } from './components/proyectos/newproyecto.component';
 import { EditproyectosComponent } from './components/proyectos/editproyectos.component';
-
-
 import { E404Component } from './components/e404/e404.component';
 
 

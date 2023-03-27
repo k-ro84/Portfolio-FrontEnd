@@ -10,8 +10,8 @@ import { Skills } from '../models/skills';
 })
 export class HysService {
 
-  URL='http://localhost:8080/skills/';
-
+  //URL='http://localhost:8080/skills/';
+  URL = environment.URL + 'skills/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Skills[]>{

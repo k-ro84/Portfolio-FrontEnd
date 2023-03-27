@@ -6,17 +6,21 @@ import { Router } from '@angular/router';
 import { JwtDto } from '../models/jwt-dto';
 import { Login } from '../models/login';
 import { NuevoUsuario } from '../models/nuevo-usuario';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+authURL = 'https://portfolio-back-0nfn.onrender.com';
+
+url = environment.URL+ 'auth/';
+  //api = 'http://localhost:4200/';
+  //url='http://localhost:4200/api/auth/';
   
-  
-  api = 'http://localhost:4200/';
-  url='http://localhost:4200/api/auth/';
+
   //currentUserSubject:BehaviorSubject<any>;
-  
 
   constructor(private httpClient: HttpClient,private router:Router) { }
 

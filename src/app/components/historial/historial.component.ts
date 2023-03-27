@@ -19,8 +19,10 @@ export class HistorialComponent implements OnInit {
   form: FormGroup;
   roles:string[];
   isAdmin=false;
+  authority:string;
 
-  constructor( private historiales: HistorialService,private tokenService:TokenService) { 
+  constructor( private historiales: HistorialService,
+    private tokenService:TokenService) { 
     this.form= new FormGroup({
      imagen: new FormControl(['', [Validators.required, Validators.minLength(1)]]),
     empresa: new FormControl([ '', [Validators.required, Validators.minLength(2)]]),

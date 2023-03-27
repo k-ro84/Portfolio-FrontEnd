@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  URL:'http://localhost:8080/',
- //URL:'https://portfolio-back-0nfn.onrender.com',
+  //URL:'http://localhost:8080/',
+ URL:'https://portfolio-back-0nfn.onrender.com',
   isLogged: true,
 };
 

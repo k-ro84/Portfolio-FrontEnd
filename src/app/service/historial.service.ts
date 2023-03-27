@@ -9,8 +9,8 @@ import { Historial } from '../models/historial';
 })
 export class HistorialService {
 
-  URL='http://localhost:8080/experience/';
-
+  //URL='http://localhost:8080/experience/';
+  URL = environment.URL + 'experience/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Historial[]>{

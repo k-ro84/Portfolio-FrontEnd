@@ -17,7 +17,7 @@ export class NewestudiosComponent implements OnInit {
   tituloEduc:string ='';
   imagEstud:string ='';
   
-title: string = 'nueva estudio/carrera';
+title: string = 'nuevo estudio/carrera';
 subtitle: string = 'rellene el siguiente formulario';
 
 
@@ -29,7 +29,7 @@ subtitle: string = 'rellene el siguiente formulario';
 
   onCreate(): void {
 
-    const estudios =new Estudios(this.institucion, this.periodo, this.detalles,this.estado,this.tituloEduc, this.imagEstud);
+    const estudios =new Estudios( this.imagEstud,this.institucion, this.periodo, this.detalles,this.estado,this.tituloEduc);
     this.estudioS.save(estudios).subscribe(
     data => {
       alert("estudio/carrera añadido/a correctamente!!!!");

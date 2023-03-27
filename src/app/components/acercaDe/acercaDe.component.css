@@ -23,12 +23,13 @@ margin-right: 50px;
   margin-left: 20px;
   border-radius: 180px;
   width: 200px;
-
+ margin-bottom: 20px;
   box-shadow: 4px 4px 4px rgb(185, 15, 15);
 }
 
 .datos1{
- margin-left: 50px;
+  
+ margin-left: 100px;
 }
 
 p{

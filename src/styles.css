@@ -16,10 +16,9 @@ aside {
     display: flex;
 }*/
 
-
 p{
     margin: 0;
-    color: rgb(243, 179, 172);
+    color: rgb(241, 150, 140);
     font-size: larger;
   }
   .reference{
@@ -45,8 +44,8 @@ p{
       
   }
   
-  #destacar {color:rgb(18, 148, 148);
-  
+  #destacar {
+    color:rgb(18, 148, 148);
   }
   
   #int{
@@ -92,7 +91,7 @@ h1 {
 .btn{
     display: inline-block;
     background:black;
-    color: rgb(238, 212, 212);
+    color: rgb(138, 64, 64);
     border: none;
     padding: 10px 20px;
     margin: 5px;
@@ -102,6 +101,16 @@ h1 {
     font-size: 15px;
     font-family: inherit;
 }
+
+/* boton del formulario de nuevos registros **/
+#newsdates{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:deeppink ;
+    border-radius: 15px;
+   margin-left: 15px;
+}
+
 
 div#info-actions{
     display: flex;

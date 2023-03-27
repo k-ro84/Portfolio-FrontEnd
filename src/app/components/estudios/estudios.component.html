@@ -1,15 +1,21 @@
 <div class="d-flex align-items-center">
   <div class="flex-grow-1 ms-3">
     <div class="card-group" >
+      <div class="flex-shrink-0">
+            <h1>Estudios</h1>
+          </div>
+            <!--
+              <div >
+                  <td ><button class="btn btn-danger btn-floating float-end" 
+                    type="button" routerLink="/newestudios">agregar estudio/carrera</button>
+                    </td>
+              </div>
+             -->
       <div >
         <td *ngIf="isAdmin"><button class="btn btn-danger btn-floating float-end" type="button" routerLink="/newestudios">agregar estudio/carrera</button></td>
       </div>
   <div *ngFor="let Estudios of estudios">  
-    <div class="flex-shrink-0">
-
-  <br>
-      <h1>Estudios</h1>
-    </div>
+   
 
     <h1><img src="Estudios.imagEstud" alt="..." width="100px" class="rounded-circle w-25 imagEstud"></h1>
     <ul>
@@ -32,7 +38,6 @@
     
     <div>
       <td *ngIf="isAdmin"> <button class="btn btn-floating float-end"routerLink="/editEstudios/{{Estudios.id}}" >edit </button></td>
-
    </div>
    <div >
     <td *ngIf="isAdmin"> <button class="btn btn-floating float-end" (click)="delete(Estudios.id)">delete </button></td>
@@ -43,5 +48,5 @@
 
 </div>
 
-<br>
+
 

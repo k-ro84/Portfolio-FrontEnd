@@ -9,8 +9,8 @@ import { AcercaDe } from '../models/acercaDe';
 })
 export class AcercadeService {
 
-URL='http://localhost:8080/acercaDe/';
-
+//URL='http://localhost:8080/acercaDe/';
+URL= environment.URL + 'acercaDe/';
   constructor(private httpClient:HttpClient) { }
   
 //este acercade lo trae el models.en base a lo elaborado en el back(en este caso lo realizado en netbeans)

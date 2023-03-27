@@ -9,8 +9,8 @@ import { Proyectos } from '../models/proyectos';
 })
 export class ProyectosService {
 
-  URL='http://localhost:8080/proyects/';
-  
+  //URL='http://localhost:8080/proyects/';
+    URL = environment.URL + 'proyects/';
   constructor(private httpClient:HttpClient) { }
 
   public lista(): Observable<Proyectos[]>{

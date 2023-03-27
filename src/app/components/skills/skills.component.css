@@ -1,5 +1,5 @@
 .hys{
-    background-color:rgb(98, 122, 165) ;
+    background-color:rgb(84, 129, 211) ;
 }
 
 h1{
@@ -9,15 +9,14 @@ h1{
     margin-left: 5rem;
 
 }
-    h2, h3{
+h2, h3{
     display: inline;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 p{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;  
  }
 
 img{

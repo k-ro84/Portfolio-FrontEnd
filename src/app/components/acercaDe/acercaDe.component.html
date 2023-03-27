@@ -8,54 +8,53 @@
 
     </div>
 
-    <div class="container-fluid">
+<div class="container-fluid">
+        
+    <div *ngFor="let AcercaDe of acercaDe">  
         <div class="card-group" >
-            <div >
-              <button class="btn btn-danger btn-floating float-end" type="button" *ngIf="isAdmin" routerLink="/newacerca">agregar persona</button>
-            </div>
-        <div *ngFor="let AcercaDe of acercaDe">  
-
-            <div class="card" style="  border-color: transparent;">
-                <div class="flex-grow-1 ms-3">
-                    <img class="foto1" src="AcercaDe.imgUser" alt="..."> 
-                    
-                </div>
-
-                <div class="card-body">
-                    <div class="yo">
-                        <h3>{{AcercaDe.nombre}}</h3>
-                        <h3>{{AcercaDe.apellido}}</h3>
-                        <h4>{{AcercaDe.direccion}}</h4>
-                    </div>
-                </div>
+            <button class="btn btn-danger btn-floating float-end" type="button" *ngIf="isAdmin" routerLink="/newacerca">agregar persona</button>
+          </div>
+        <div class="card" style="  border-color: transparent;">
+            <div class="flex-grow-1 ms-3">
+                <img class="foto1" src="/assets/imag/foto_frente.jpg" alt="..."> 
+                
             </div>
 
-                  <div class="card"  style="border-color: transparent;">
-                     <div class="card-body">
-                          <div class="datos1">
-                             <h1 class="display-5">{{title}}</h1>
-                          </div>
-                          <div>
-                              <p id="text-acercade">{{AcercaDe.descripcion}}</p>
-                           </div>
-                          
-                     </div> 
-                     <div>
-                        <button class="btn btn-light" *ngIf="isAdmin == true"  routerLink="/editAcercaDe/{{AcercaDe.id}}" >edit </button>
-                       </div>
-                       <div >
-                          <button class="btn float-end"  *ngIf="isAdmin == true" (click)="delete(AcercaDe.id)">delete </button>
-                       </div>
-                 </div>
-           
-
+            <div class="card-body">
+                <div class="yo">
+                    <h3>{{AcercaDe.nombre}}</h3>
+                    <h3>{{AcercaDe.apellido}}</h3>
+                    <h4>{{AcercaDe.direccion}}</h4>
+                </div>
+            </div>
         </div>
 
-    <!-- <div id="info-actions">
-            <button type="button" class="btn btn-warning"> <a href="">Tengo interés en </a> </button>
-            <button type="button" class="btn btn-success"> <a href="">Más </a></button>
-        </div>-->
+              <div class="card"  style="border-color: transparent;">
+                 <div class="card-body">
+                      <div class="datos1">
+                         <h1 class="display-5">{{title}}</h1>
+                      </div>
+                      <div>
+                          <p id="text-acercade">{{AcercaDe.descripcion}}</p>
+                       </div>
+                      
+                 </div> 
+                 <div>
+                    <button class="btn btn-light" *ngIf="isAdmin == true"  routerLink="/editAcercaDe/{{AcercaDe.id}}" >edit </button>
+                   </div>
+                   <div >
+                      <button class="btn float-end"  *ngIf="isAdmin == true" (click)="delete(AcercaDe.id)">delete </button>
+                   </div>
+             </div>           
+
     </div>
+
+ <div id="info-actions">
+        <button type="button" class="btn btn-warning"> <a href="">Tengo interés en </a> </button>
+        <button type="button" class="btn btn-success"> <a href="">Más </a></button>
+    </div>
+
+</div>
 
 </div>
 

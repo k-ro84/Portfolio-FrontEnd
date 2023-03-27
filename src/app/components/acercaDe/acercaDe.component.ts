@@ -20,9 +20,12 @@ export class AcercaDeComponent implements OnInit {
   texto :string='';
   
   acercaDe: AcercaDe[]=[];
-
+  //acercaDe: AcercaDe = new AcercaDe("","","","","");
+  nombre:string= 'Carolina';
+  apellido:string='Olguin';
+  direccion:string='Mendoza,Argentina';
   isLogged = environment.isLogged;
-
+  authority:string;
  form: FormGroup;
  roles:string[];
  isAdmin=false;
@@ -36,9 +39,9 @@ export class AcercaDeComponent implements OnInit {
        imgUser: new FormControl(['', [Validators.required,Validators.max(250)]]),
     })
   }
-  
+ 
 ngOnInit(): void {
-  this.cargarPersona();
+ this.cargarPersona();
   //colocar en el const el token service
   /**if(this.tokenService.getToken()){
   this.isLogged =true;
@@ -47,7 +50,7 @@ ngOnInit(): void {
   }
    */
   this.roles = this.tokenService.getAuthorities();
-    this.roles.forEach(rol => {
+    this.roles.forEach((rol) => {
       if (rol === 'ROLE_ADMIN') {
         this.isAdmin = true;
       }
@@ -56,21 +59,25 @@ ngOnInit(): void {
 
 cargarPersona():void {
   this.acercaDes.lista().subscribe(
-    data=> {this.acercaDe=data;},
-    err => {
+    (data)=> {
+      this.acercaDe=data;},
+    (err) => {
       console.log(err);
     } 
     );
   
 }
 
+
+
 delete(id?:number):void {
   if (id != undefined) {
   this.acercaDes.delete(id).subscribe(
-    data=> {
+    (data)=> {
      
       this.cargarPersona();
-    },err => {
+    },
+    (err) => {
       
       alert("no es posible eliminar esta persona!!");
     }

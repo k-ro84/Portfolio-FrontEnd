@@ -9,7 +9,8 @@ import { Estudios } from '../models/estudios';
 })
 export class EstudiosService {
 
-  URL = 'http://localhost:8080/education/';
+  //URL = 'http://localhost:8080/education/';
+  URL = environment.URL + 'education/';
 
   constructor(private httpClient:HttpClient) { }
 
